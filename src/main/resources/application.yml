@@ -1,0 +1,12 @@
+aws:
+  region: ${AWS_REGION:eu-north-1}
+  s3:
+    bucket: ${AWS_S3_BUCKET:sep}
+
+minio:
+  url: ${MINIO_URL:http://localhost:9000}
+  bucket: ${MINIO_BUCKET:sep}
+  access-key: ${MINIO_ACCESS_KEY:minioadmin}
+  secret-key: ${MINIO_SECRET_KEY:minioadmin}
+  private-preview-expires-in-hours: ${MINIO_PRIVATE_PREVIEW_EXPIRES_IN_HOURS:6}
+  public-preview-expire-in-hours: ${MINIO_PUBLIC_PREVIEW_EXPIRES_IN_HOURS:16}
