@@ -2,15 +2,8 @@ package org.zegai.miniopoc.storage;
 
 public enum FileStorageFolder {
 
-    SPONSOR("sponsor", true),
-    PARTNER("partner", true),
-    INSTRUCTOR("instructor", true),
-    COURSE("course-cover", true),
-    ELEMENT_FILE("element-file", false),
-    QUESTION_FILE("question-file", false),
-    PAYMENT_PROOF("payment-proof", false),
-    PROGRESS_REPORT("progress-report", false),
-    STUDENT_ANSWERS("student-answers", false);
+    TOOLS("tools", true),
+    CONFIG("config", true);
 
     private final String name;
     private final boolean isPublic;

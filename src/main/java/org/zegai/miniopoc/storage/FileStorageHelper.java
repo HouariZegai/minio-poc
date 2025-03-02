@@ -1,13 +1,12 @@
 package org.zegai.miniopoc.storage;
 
+import org.zegai.miniopoc.ApiApp;
 import org.zegai.miniopoc.entity.FileDescriptor;
 
 import java.util.Set;
 
 public class FileStorageHelper {
 
-    private FileStorageService fileStorageService;
-    
     private FileStorageHelper() {
     }
 
@@ -19,7 +18,8 @@ public class FileStorageHelper {
         return getPreviewFileUrl(fileDescriptors.iterator().next(), folder);
     }
 
-    public String getPreviewFileUrl(FileDescriptor fileDescriptor, FileStorageFolder folder) {
+    public static String getPreviewFileUrl(FileDescriptor fileDescriptor, FileStorageFolder folder) {
+        FileStorageService fileStorageService = ApiApp.getApplicationContext().getBean(FileStorageService.class);
         return fileStorageService.getPreviewFileUrl(fileDescriptor, folder);
     }
 }
